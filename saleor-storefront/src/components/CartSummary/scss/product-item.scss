@@ -1,0 +1,36 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.product-item {
+  display: flex;
+  margin-top: 26px;
+
+  &__image {
+    margin-right: 13px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    margin-top: 9px;
+    margin-bottom: 10px;
+  }
+
+  &__sku {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #939bb0;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #252525;
+    margin-top: 19px;
+  }
+}

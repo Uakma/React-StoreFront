@@ -1,0 +1,98 @@
+@import "../../../../globalStyles/scss/variables.scss";
+
+.input {
+  position: relative;
+
+  &__input-wrapper {
+    display: flex;
+    &--with-password-eye {
+      position: relative;
+      svg {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  input::placeholder {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 27px;
+    color: #717272;
+  }
+
+  label {
+    position: relative;
+  }
+
+  &__label-text {
+    position: absolute;
+    top: -33px;
+    left: 13px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #878a92;
+
+    &--accent {
+      top: -34px;
+      left: 15px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      color: #4f647a;
+    }
+  }
+
+  &--border-left {
+    input {
+      padding-left: 26px;
+    }
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: $yellow-color;
+      z-index: 1;
+    }
+  }
+
+  &--border-bottom {
+    input {
+      padding-left: 26px;
+    }
+
+    border-bottom: 1px solid #797979;
+  }
+
+  &--error {
+    input {
+      border: 1px solid #ff6243;
+
+      &::placeholder {
+        color: #ff6243;
+      }
+    }
+    .input__label-text {
+      color: #ff6243 !important;
+    }
+  }
+}

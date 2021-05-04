@@ -1,0 +1,10 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.account-personal-details-form {
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+}

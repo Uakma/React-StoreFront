@@ -1,0 +1,72 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.search-box {
+  border: solid 5px #2e2e2e;
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  margin-right: 20px;
+
+  input[type="search"] {
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 50px;
+    transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms,
+      background-color 1000ms linear;
+    &:focus {
+      outline: none;
+    }
+    &:focus,
+    &:not(:placeholder-shown) {
+      width: 300px;
+      transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+      background-color: #ddd;
+      + span {
+        bottom: 3px;
+        right: 10px;
+        transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
+      }
+      + span:after {
+        top: 0;
+        right: 7px;
+        opacity: 1;
+        transition: top 300ms ease-out 1100ms, right 300ms ease-out 1100ms,
+          opacity 300ms ease 1100ms;
+        border-width: 3px;
+      }
+      + span::before {
+        border-width: 3px;
+      }
+    }
+  }
+  span {
+    width: 17px;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -13px;
+    right: -13px;
+    transition: bottom 300ms ease-out 300ms, right 300ms ease-out 300ms;
+    &:before,
+    &:after {
+      content: "";
+      height: 17px;
+      border-left: solid 5px black;
+      position: absolute;
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+      opacity: 0;
+      top: -15px;
+      right: -10px;
+      transition: top 300ms ease-out, right 300ms ease-out,
+        opacity 300ms ease-out;
+    }
+  }
+}

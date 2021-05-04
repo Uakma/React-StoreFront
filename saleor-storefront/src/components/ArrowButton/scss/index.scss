@@ -1,0 +1,17 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.arrow-button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 17px;
+  text-transform: uppercase;
+
+  svg {
+    margin-left: 11px;
+  }
+}
+
+.arrow-button--yellow {
+  background-color: $yellow-color;
+  padding: 25px 33px;
+}

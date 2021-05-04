@@ -1,0 +1,43 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.delivery-form {
+  margin-top: 52px;
+
+  &__title {
+    margin-bottom: 23px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    min-width: 100%;
+    display: flex;
+    & > * {
+      flex: 1;
+      &:first-child {
+        padding-right: 15px;
+      }
+      &:last-child {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &__personal-details {
+    margin-bottom: 57px;
+    &__inputs {
+    }
+  }
+}
+
+.row--tel-prefix {
+  & > *:first-child {
+    max-width: 85px;
+  }
+
+  & > *:last-child {
+  }
+}

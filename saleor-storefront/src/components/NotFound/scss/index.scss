@@ -1,0 +1,16 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+$tablet-view: 600px;
+$desktop-view: 1200px;
+
+.not-found-page {
+  text-align: center;
+  margin-top: 164px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  @media (min-width: $tablet-view) {
+  }
+  @media (min-width: $desktop-view) {
+  }
+}

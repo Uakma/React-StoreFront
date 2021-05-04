@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 19
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build the api staticfiles
+      - docker-compose -f docker-compose-build.yml up api
+      - echo Build the static dashboard
+      - docker-compose -f docker-compose-build.yml up dashboard
+      - echo Build the static storefront
+      - docker-compose -f docker-compose-build.yml up storefront
+artifacts:
+  files:
+    - '**/*'

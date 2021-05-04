@@ -1,0 +1,52 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.checkbox-wrapper {
+  position: relative;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  transition: all 0.3s ease-out;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid $yellow-color;
+    border-width: 0 3px 3px 0;
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+    transition: all 0.3s ease-out;
+  }
+}
+
+input:checked ~ .checkbox {
+  transform: rotate(0deg) scale(1);
+  border: 1px solid $yellow-color;
+
+  &::after {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid $yellow-color;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}

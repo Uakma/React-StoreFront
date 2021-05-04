@@ -1,0 +1,14 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.account-page {
+  margin-top: 164px;
+  display: flex;
+
+  & > *:first-child {
+    flex: 1;
+  }
+
+  & > *:last-child {
+    flex-basis: 424px;
+  }
+}

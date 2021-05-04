@@ -1,0 +1,75 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.dropdown {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  // left: 20%;
+
+  right: calc(9.5% + 108px);
+
+  text-align: left;
+  bottom: 0;
+  transform: translatey(100%);
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 26px 27px 26px rgba(0, 0, 0, 0.31);
+  padding: 50px;
+  height: 535px;
+  min-width: 1215px;
+  border-radius: 0px 0px 267.5px 0px;
+
+  &__column {
+    min-width: 195px;
+
+    &__heading {
+      position: relative;
+      font-size: 18px;
+      line-height: 17px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 38px;
+      &::after {
+        display: inline-block;
+        content: "";
+        position: absolute;
+        bottom: -13px;
+        left: 0;
+        width: 58px;
+        height: 4px;
+        transition: all 0.3;
+        background-color: #ecedea;
+      }
+    }
+
+    &__list-item {
+      color: #4f647a;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: normal;
+      text-transform: capitalize;
+      margin-bottom: 30px;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      .dropdown__column__heading::after {
+        background-color: $yellow-color;
+      }
+    }
+  }
+
+  &__image {
+  }
+
+  & > div {
+    display: flex;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}

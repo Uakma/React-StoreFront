@@ -1,0 +1,35 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.quantity-manager {
+  display: flex;
+
+  & > * {
+    width: 53px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 11px;
+  }
+
+  &__subtract,
+  &__add {
+    background-color: #e5e5e5;
+    cursor: pointer;
+  }
+
+  &__count {
+    background-color: $yellow-color;
+  }
+
+  &--small {
+    & > * {
+      width: 32px;
+      height: 32px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}

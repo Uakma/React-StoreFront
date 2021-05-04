@@ -1,0 +1,95 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+$footer-bg-color: #232323;
+$footer-font-color: #707070;
+
+.footer {
+  background-color: $footer-bg-color;
+  display: flex;
+  color: $footer-font-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+  @media (min-width: 600px) {
+    padding-left: 79px;
+    padding-right: 79px;
+  }
+  @media (min-width: 1100px) {
+    padding-left: 9.5%;
+    padding-right: 9.5%;
+  }
+
+  h4,
+  h5 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+  }
+
+  &__brand-info {
+    flex: 1;
+    margin-top: 58px;
+    @media (max-width: 600px) {
+      text-align: center;
+      a {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 45px;
+  }
+
+  &__social {
+    margin-bottom: 40px;
+    h4 {
+      margin-bottom: 14px;
+    }
+    a {
+      margin-right: 30px;
+    }
+  }
+
+  &__legal {
+    margin-bottom: 36px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__navigations {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 46px;
+    @media (max-width: 600px) {
+      border-bottom: 1px solid rgba($color: #f7f7f7, $alpha: 0.22);
+    }
+  }
+
+  &__navigation {
+    flex: 1 0 200px;
+    margin-left: 8px;
+    margin-bottom: 45px;
+    @media (min-width: 600px) {
+      margin-left: 70px;
+      margin-bottom: 0;
+    }
+    h5 {
+      margin-bottom: 12px;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__navigation--contact-us {
+    li {
+      margin-bottom: 31px;
+    }
+  }
+}

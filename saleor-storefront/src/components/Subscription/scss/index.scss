@@ -1,0 +1,123 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+$tablet-view: 600px;
+$desktop-view: 1500px;
+
+.subscription {
+  &__svg {
+    position: absolute;
+    top: -55px;
+    left: -35px;
+    z-index: -1;
+  }
+
+  &__background {
+    width: 100%;
+    height: 235px;
+    background-image: url(../../../images/subscription-image.png);
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+  }
+
+  &__form {
+    position: relative;
+    background-color: $yellow-color;
+    padding-top: 30px;
+    padding-bottom: 128px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  &__label {
+    h2 {
+      font-family: "Coral waves";
+      font-size: 114px;
+      line-height: 70px;
+      text-align: center;
+      color: #1e1e1e;
+    }
+    p {
+      max-width: 310px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 32px;
+    border: 0;
+    outline: none;
+    &::placeholder {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 27px;
+      color: #3d3f40;
+      opacity: 0.63;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    background-color: #2a2a2a;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.31em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $tablet-view) {
+    &__form {
+      padding-bottom: 64px;
+      padding-left: 50px;
+      padding-right: 50px;
+      &__flex {
+        display: flex;
+      }
+    }
+
+    &__input {
+      flex: 1;
+    }
+
+    &__submit {
+      flex-basis: 320px;
+    }
+  }
+
+  @media (min-width: $desktop-view) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__form {
+      padding: 30px;
+      padding-left: 50px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__flex {
+        margin-left: 50px;
+        flex: 1;
+      }
+    }
+
+    &__background {
+      flex-basis: 440px;
+    }
+  }
+}

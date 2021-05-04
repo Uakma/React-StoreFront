@@ -1,0 +1,18 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+$tablet-view: 990px;
+$desktop-view: 1400px;
+
+.product-page {
+  margin-top: 32px;
+
+  @media (min-width: 990px) {
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width) {
+    margin-top: 77px;
+  }
+}

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$base-font-family: "Proxima Nova", sans-serif;
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  src: url("../fonts/Proxima-Nova/ProximaNova-Regular.otf");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  src: url("../fonts/Proxima-Nova/Proxima\ Nova\ Bold.otf");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 800;
+  src: url("../fonts/Proxima-Nova/Proxima\ Nova\ Bold.otf");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 900;
+  src: url("../fonts/Proxima-Nova/Proxima\ Nova\ Black.otf");
+}
+
+@font-face {
+  font-family: "Coral Waves";
+  src: url("../fonts/18800.OTF");
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-color;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: 1.7rem;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  color: inherit;
+}
+
+p {
+  line-height: 1.5rem;
+}

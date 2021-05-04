@@ -1,0 +1,28 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.category-filter {
+  background-color: #fff;
+  width: 274px;
+  padding-top: 37px;
+  padding-left: 25px;
+  padding-bottom: 53px;
+
+  &__title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+  }
+
+  &__category {
+    &__name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      color: #252525;
+      margin-left: 40px;
+    }
+    margin-bottom: 32px;
+  }
+}

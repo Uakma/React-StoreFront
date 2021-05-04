@@ -1,0 +1,51 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.checkout-step {
+  display: flex;
+
+  &__number {
+    background-color: #c4c4c4;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 6px;
+    color: #000000;
+    opacity: 0.28;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+      background-color: $yellow-color;
+      opacity: 1;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #2e2e2e;
+    margin-left: 9px;
+  }
+
+  &--mobile {
+  }
+
+  &--desktop {
+    position: relative;
+
+    &::after {
+      position: relative;
+      top: 50%;
+      content: "";
+      width: 292px;
+      height: 1px;
+      background: #c4c4c4;
+      margin-left: 13px;
+      margin-right: 11px;
+    }
+  }
+}

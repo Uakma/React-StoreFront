@@ -1,0 +1,14 @@
+@import "../../../../globalStyles/scss/variables.scss";
+
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 39px;
+  margin-bottom: 300px;
+
+  & > * {
+    flex: calc(50% - 20px);
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+}

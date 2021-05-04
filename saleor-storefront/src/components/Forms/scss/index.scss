@@ -1,0 +1,139 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+$tablet-view: 437px;
+$desktop-view: 1400px;
+
+.auth-card {
+  &__heading {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 27px;
+    color: #313131;
+  }
+
+  &__back-button {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 19px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  &__form {
+    margin-top: 35px;
+    & > *:first-child {
+      margin-bottom: 21px;
+    }
+    &__actions {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      color: #59595b;
+      .switch {
+        margin-left: 16px;
+      }
+      & > div {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__consent {
+    margin-top: 33px;
+    margin-bottom: 33px;
+
+    label:first-child {
+      position: relative;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+
+    &__checkbox {
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      border: 1px solid rgba(0, 0, 0, 0.21);
+      transition: all 0.3s ease-out;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 12px;
+        top: 12px;
+        height: 0px;
+        width: 0px;
+        border-radius: 5px;
+        border: solid $green-color;
+        border-width: 0 3px 3px 0;
+        transform: rotate(0deg) scale(0);
+        opacity: 1;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    input:checked ~ &__checkbox {
+      transform: rotate(0deg) scale(1);
+      border: 1px solid $green-color;
+
+      &::after {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+        left: 8px;
+        top: 3px;
+        width: 6px;
+        height: 12px;
+        border: solid $green-color;
+        border-width: 0 2px 2px 0;
+        background-color: transparent;
+        border-radius: 0;
+      }
+    }
+
+    &__text {
+      margin-left: 29px;
+      font-size: 13px;
+      line-height: 21px;
+      color: #939bb0;
+      a {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: #333;
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 24px;
+    & > * {
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+}
+
+.reset-my-password {
+  cursor: pointer;
+  text-decoration-line: underline;
+}

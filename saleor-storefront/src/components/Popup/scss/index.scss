@@ -1,0 +1,42 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+$tablet-view: 437px;
+$desktop-view: 1400px;
+
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1001010;
+}
+
+.popup {
+  position: absolute;
+  bottom: 0;
+  background-color: #f7f7f7;
+  padding: 40px 25px;
+  padding-bottom: 30px;
+  width: 100%;
+  max-width: $tablet-view;
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  @media (min-width: $tablet-view) {
+    top: 0;
+    right: 0;
+    bottom: unset;
+
+    &__close {
+      top: 16px;
+      left: -22px;
+      transform: none;
+    }
+  }
+}

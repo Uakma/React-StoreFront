@@ -1,0 +1,22 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    width: 31px;
+    height: 31px;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #28a7fb;
+      path {
+        fill: white;
+      }
+    }
+  }
+}

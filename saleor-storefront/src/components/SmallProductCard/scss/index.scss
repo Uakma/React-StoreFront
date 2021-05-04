@@ -1,0 +1,62 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.sm-product-card {
+  display: flex;
+  margin-bottom: 20px;
+
+  &__name {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    padding-top: 5px;
+  }
+
+  &__delivery-time {
+    color: #939bb0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  &__actions {
+    margin-top: 28px;
+    svg {
+      margin-right: 11px;
+      cursor: pointer;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    margin-left: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__price-undiscounted {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #252525;
+    text-decoration-line: line-through;
+  }
+
+  &__price-current {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #eb5757;
+  }
+}

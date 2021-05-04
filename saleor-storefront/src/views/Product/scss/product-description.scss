@@ -1,0 +1,84 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+$tablet-view: 990px;
+
+.product-desc {
+  padding-left: 21px;
+  padding-right: 21px;
+
+  &__social-links {
+    margin-top: 32px;
+    width: 122px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 35px;
+    letter-spacing: 0.02em;
+    margin-top: 49px;
+  }
+
+  &__info {
+    &__title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 27px;
+      color: #2e2e2e;
+      padding-left: 12px;
+      border-left: 8px solid $yellow-color;
+      margin-top: 35px;
+      margin-bottom: 20px;
+    }
+
+    &__desc {
+      font-size: 16px;
+      line-height: 23px;
+      color: #878a92;
+    }
+
+    &__read-more {
+      margin-top: 30px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__quantity-and-price {
+    margin-top: 26px;
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #252525;
+    margin-top: 15px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+  }
+
+  &__heart {
+    margin-left: 16px;
+  }
+
+  @media (min-width: $tablet-view) {
+    &__social-links {
+      margin-top: 0;
+    }
+
+    &__info {
+      &__desc {
+        max-width: 418px;
+      }
+    }
+  }
+}

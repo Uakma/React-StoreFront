@@ -1,0 +1,30 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.page-hero {
+  position: relative;
+  margin-top: 164px;
+  min-height: 233px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__background {
+    position: absolute;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.4);
+  }
+
+  &__title {
+    font-family: "Coral waves", sans-serif;
+    color: $yellow-color;
+    font-size: 68px;
+    line-height: 67px;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

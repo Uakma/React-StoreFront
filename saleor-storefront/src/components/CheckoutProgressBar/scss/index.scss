@@ -1,0 +1,8 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.checkout-progress-bar {
+  &__desktop-child {
+    display: flex;
+    justify-content: center;
+  }
+}

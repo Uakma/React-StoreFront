@@ -1,0 +1,52 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 17px;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 18px;
+  }
+}
+
+.button--yellow {
+  color: #1e1e1e;
+  background-color: $yellow-color;
+}
+
+.button--blue {
+  color: #fff;
+  background-color: $blue-color;
+}
+
+.button--white {
+  color: #1e1e1e;
+  background-color: #fff;
+}
+
+.button--black {
+  color: #fff;
+  background-color: #2a2a2a;
+}
+
+.button--fixed {
+  max-width: 318px;
+  @media (min-width: $tablet-view) {
+    max-width: 361px;
+  }
+}
+
+.button--outlined {
+  background-color: transparent;
+  color: #313131;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+}

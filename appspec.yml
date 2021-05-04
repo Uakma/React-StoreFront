@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/ProServe
+
+hooks:
+  BeforeInstall:
+    - location: deploy/deploy__beforeinstall_stage.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: deploy/deploy__install_stage.sh
+      timeout: 1800
+      runas: root
+  ApplicationStart:
+    - location: deploy/deploy__start_stage.sh
+      timeout: 1800
+      runas: ubuntu

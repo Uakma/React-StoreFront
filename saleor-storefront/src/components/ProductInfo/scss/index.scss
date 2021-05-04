@@ -1,0 +1,55 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.product-info {
+  width: 100%;
+
+  &__heading {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    color: #313131;
+    padding-bottom: 17px;
+    padding-left: 23px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 23px;
+    color: #878a92;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__attributes {
+    background-color: #e5e5e5;
+    padding-top: 4px;
+    padding-left: 32px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+
+    &__title {
+      position: relative;
+      font-weight: 800;
+      font-size: 15px;
+      line-height: 25px;
+      color: #2e2e2e;
+      margin-bottom: 3px;
+
+      &::before {
+        position: absolute;
+        top: 7px;
+        left: -21px;
+        content: "";
+        background-image: url("../../../images/done-icon.png");
+        width: 13px;
+        height: 11px;
+      }
+    }
+  }
+
+  @media (min-width: 498px) {
+    width: 498px;
+  }
+}

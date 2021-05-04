@@ -1,0 +1,37 @@
+@import "../../../globalStyles/scss/variables.scss";
+
+.payment__option {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  border-radius: 10px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 25px;
+  padding-right: 15px;
+
+  & > *:first-child {
+    label {
+      width: 25px;
+      height: 25px;
+    }
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    color: #2e2e2e;
+  }
+
+  &__icon {
+    flex: 1;
+    text-align: right;
+  }
+}

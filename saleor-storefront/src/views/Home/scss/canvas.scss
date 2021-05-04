@@ -1,0 +1,29 @@
+.homepage-canvas {
+  &__svg-1 {
+    position: absolute;
+    top: 1270px;
+    right: -21px;
+    z-index: -1;
+  }
+
+  &__svg-2 {
+    position: absolute;
+    top: 1750px;
+    right: -31px;
+    z-index: -1;
+  }
+
+  &__svg-3 {
+    position: absolute;
+    top: 2210px;
+    left: -3px;
+    z-index: -1;
+  }
+
+  &__svg-4 {
+    position: absolute;
+    top: 2296px;
+    left: -43px;
+    z-index: -1;
+  }
+}

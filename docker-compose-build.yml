@@ -1,0 +1,62 @@
+version: '2'
+# This file intended to use to generate static files during deployment
+
+services:
+  api:
+    build:
+      context: ./saleor
+      dockerfile: ./Dockerfile
+      args:
+        STATIC_URL: '/static/'
+    restart: 'no'
+    networks:
+      - saleor-backend-tier
+    volumes:
+      - ./saleor/saleor/:/app/saleor:Z
+      - ./saleor/templates/:/app/templates:Z
+      - ./saleor/tests/:/app/tests
+      # prevents overshadowing of build-time assets
+      - /app/saleor/static/assets
+      - /app/templates/templated_email/compiled
+      # shared volume between worker and api for media
+      - saleor-media:/app/media
+      - ./static_dist/api_staticfiles/:/app/static
+    command: python manage.py collectstatic --noinput
+    env_file: dev_server.env
+    environment:
+      - STATIC_URL=/static/
+
+  storefront:
+    build:
+      context: ./saleor-storefront
+      dockerfile: ./Dockerfile.build
+    restart: 'no'
+    volumes:
+      - ./saleor-storefront/:/app:cached
+      - /app/node_modules/
+      - ./static_dist/storefront/:/app/dist
+    command: npm run build
+    environment:
+      - API_URI=/graphql/
+
+  dashboard:
+    build:
+      context: ./saleor-dashboard
+      dockerfile: ./Dockerfile.build
+    restart: 'no'
+    volumes:
+      - ./saleor-dashboard/:/app:cached
+      - /app/node_modules/
+      - ./static_dist/dashboard/:/app/build/dashboard
+    command: npm run build
+    environment:
+      - API_URI=/graphql/
+      - STATIC_URL=/dashboard/
+      - APP_MOUNT_URI=/dashboard/
+
+volumes:
+  saleor-media:
+
+networks:
+  saleor-backend-tier:
+    driver: bridge

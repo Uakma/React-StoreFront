@@ -1,0 +1,53 @@
+.filter-select {
+  display: flex;
+  flex-direction: column;
+  margin-right: 29px;
+
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    margin-right: 18px;
+    margin-bottom: 3px;
+  }
+
+  // React Select Styling
+  &__select {
+    width: 155px;
+  }
+
+  &__control {
+    border: 0 !important;
+    box-shadow: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  &__value-container {
+  }
+
+  &__indicator {
+  }
+
+  &__indicator-separator {
+    display: none !important;
+  }
+
+  &__menu {
+  }
+
+  &__menu-list {
+  }
+
+  &__option {
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    align-items: center;
+    &__select {
+      width: 164px;
+    }
+  }
+}

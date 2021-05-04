@@ -1,0 +1,126 @@
+.view-catalog-banner {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  margin-top: 30px;
+  padding: 22px 17px;
+
+  &__image {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__border {
+    border: 3px solid rgba($color: #fff, $alpha: 0.5);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Coral waves;
+    color: #fff;
+    font-size: 98px;
+    line-height: 59px;
+  }
+
+  &__button {
+    position: absolute;
+    left: 0;
+    bottom: 59px;
+    width: 100%;
+    text-align: center;
+    &__text {
+      font-family: Montserrat;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.195em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.view-catalog-banner--with-text {
+  height: 243px;
+  padding: 10px 23px;
+
+  .view-catalog-banner__text {
+    max-width: 100px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-60%);
+  }
+
+  .view-catalog-banner__button {
+    bottom: 25px;
+  }
+}
+
+.view-catalog-banner--tablet {
+  height: 137px;
+}
+
+.view-catalog-banner--desktop {
+  width: 274px;
+  height: 554px;
+  margin-top: 0;
+
+  &__button {
+    bottom: 29px !important;
+    transform: none;
+  }
+}
+
+.view-catalog-banner--with-text.view-catalog-banner--tablet {
+  padding: 22px 17px;
+}
+
+.view-catalog-banner--with-text.view-catalog-banner--desktop {
+  padding: 22px 17px;
+
+  .view-catalog-banner__text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    font-family: Coral waves;
+    color: #fff;
+    font-size: 98px;
+    line-height: 59px;
+    transform: translateX(-50%);
+    max-width: 150px;
+  }
+
+  .view-catalog-banner__button {
+    position: absolute;
+    left: 0;
+    bottom: 59px;
+    width: 100%;
+    text-align: center;
+    &__text {
+      font-family: Montserrat;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.195em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
